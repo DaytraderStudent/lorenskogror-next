@@ -23,19 +23,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
+            <div className="mb-4">
               <Image
                 src="/images/logo.png"
                 alt="Lørenskog Rørleggerbedrift"
-                width={40}
-                height={40}
-                className="h-9 w-auto brightness-200"
+                width={364}
+                height={60}
+                className="h-10 w-auto brightness-0 invert"
+                unoptimized
               />
-              <span className="font-heading font-semibold text-sm leading-tight">
-                Lørenskog
-                <br />
-                Rørleggerbedrift AS
-              </span>
             </div>
             <p className="text-teal-200/70 text-sm leading-relaxed">
               Tradisjonsrik mesterbedrift med over 60 års erfaring innen VVS.
