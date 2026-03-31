@@ -119,7 +119,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-teal-900">
         <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-teal-200/50">
-          <p>&copy; {new Date().getFullYear()} Lørenskog Rørleggerbedrift AS. Org.nr: 914 809 702</p>
+          <p>&copy; {new Date().getFullYear()} Lørenskog Rørleggerbedrift AS. Org.nr: 935 935 024</p>
           <p>Alle rettigheter reservert.</p>
         </div>
       </div>

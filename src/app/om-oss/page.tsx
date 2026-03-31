@@ -96,7 +96,7 @@ export default function OmOssPage() {
                   Hvem vi er
                 </p>
                 <h2 className="font-heading text-3xl font-bold text-slate-900 mb-6">
-                  Over 60 års erfaring med VVS
+                  Over 40 års erfaring med VVS
                 </h2>
                 <div className="space-y-4 text-slate-600 leading-relaxed">
                   <p>

@@ -17,7 +17,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Lørenskog Rørleggerbedrift AS | Mesterbedrift siden 1958",
+    default: "Lørenskog Rørleggerbedrift AS | Mesterbedrift siden 1984",
     template: "%s | Lørenskog Rørleggerbedrift AS",
   },
   description:
