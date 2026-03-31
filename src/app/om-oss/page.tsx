@@ -101,7 +101,7 @@ export default function OmOssPage() {
                 <div className="space-y-4 text-slate-600 leading-relaxed">
                   <p>
                     Lørenskog Rørleggerbedrift AS er en tradisjonsrik
-                    mesterbedrift med over 60 års erfaring. Med rundt 20 ansatte
+                    mesterbedrift med over 40 års erfaring. Med rundt 20 ansatte
                     leverer vi komplette VVS-løsninger for både næring og bolig.
                   </p>
                   <p>

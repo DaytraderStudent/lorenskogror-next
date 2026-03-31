@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Lørenskog Rørleggerbedrift AS",
   },
   description:
-    "Lørenskog Rørleggerbedrift AS er en tradisjonsrik mesterbedrift med over 60 års erfaring innen sanitær, varme, sprinkler, kjøle- og gassanlegg. Miljøfyrtårn-sertifisert.",
+    "Lørenskog Rørleggerbedrift AS er en tradisjonsrik mesterbedrift med over 40 års erfaring innen sanitær, varme, sprinkler, kjøle- og gassanlegg. Miljøfyrtårn-sertifisert.",
   keywords: [
     "rørlegger",
     "Lørenskog",

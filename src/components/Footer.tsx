@@ -34,7 +34,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-teal-200/70 text-sm leading-relaxed">
-              Tradisjonsrik mesterbedrift med over 60 års erfaring innen VVS.
+              Tradisjonsrik mesterbedrift med over 40 års erfaring innen VVS.
               Vi leverer kvalitetsarbeid med fokus på miljø og bærekraft.
             </p>
           </div>

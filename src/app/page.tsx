@@ -3,12 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Droplets,
-  Flame,
-  ShieldCheck,
-  Snowflake,
-  Fuel,
-  Bath,
   ArrowRight,
   ChevronDown,
 } from "lucide-react";
@@ -21,12 +15,12 @@ import Testimonials from "@/components/Testimonials";
 import PartnerMarquee from "@/components/PartnerMarquee";
 
 const services = [
-  { icon: Droplets, title: "Sanitæranlegg", desc: "Komplett sanitærinstallasjon for næring og bolig." },
-  { icon: Flame, title: "Varmeanlegg", desc: "Energieffektive varmeløsninger og gulvvarme." },
-  { icon: ShieldCheck, title: "Sprinkelanlegg", desc: "Brannsikring med godkjente sprinkeranlegg." },
-  { icon: Snowflake, title: "Kjøleanlegg", desc: "Kjølesystemer for industrielle og kommersielle bygg." },
-  { icon: Fuel, title: "Gassanlegg", desc: "Installasjon og vedlikehold av gassanlegg." },
-  { icon: Bath, title: "Baderom", desc: "Totalrenovering og nybygg av baderom." },
+  { title: "Sanitæranlegg", desc: "Komplett sanitærinstallasjon for næring og bolig.", image: "/images/service-sanitaer.jpg" },
+  { title: "Varmeanlegg", desc: "Energieffektive varmeløsninger og gulvvarme.", image: "/images/service-varme.jpg" },
+  { title: "Sprinkelanlegg", desc: "Brannsikring med godkjente sprinkeranlegg.", image: "/images/service-sprinkler.jpg" },
+  { title: "Kjøleanlegg", desc: "Kjølesystemer for industrielle og kommersielle bygg.", image: "/images/service-kjole.jpg" },
+  { title: "Gassanlegg", desc: "Installasjon og vedlikehold av gassanlegg.", image: "/images/service-gass.jpg" },
+  { title: "Baderom", desc: "Totalrenovering og nybygg av baderom.", image: "/images/service-bad.jpg" },
 ];
 
 const certifications = [
@@ -95,7 +89,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
             >
-              Tradisjonsrik rørleggerbedrift med over 35 års erfaring.
+              Tradisjonsrik rørleggerbedrift med over 40 års erfaring.
               Vi leverer kvalitetsarbeid innen sanitær, varme,
               sprinkler og baderom i hele Akershus-regionen.
             </motion.p>
@@ -115,14 +109,12 @@ export default function HomePage() {
                 Våre tjenester
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white/20 text-white hover:bg-white/10 hover:text-white h-14 px-8 text-base rounded-full backdrop-blur-sm"
-                render={<a href="tel:+4792258585" />}
+              <a
+                href="tel:+4792258585"
+                className="inline-flex items-center justify-center h-14 px-8 text-base font-medium text-white rounded-full border border-white/25 hover:bg-white/10 backdrop-blur-sm transition-colors duration-200 cursor-pointer"
               >
                 Ring 922 58 585
-              </Button>
+              </a>
             </motion.div>
 
             {/* Quick stats row */}
@@ -133,7 +125,7 @@ export default function HomePage() {
               transition={{ delay: 0.7, duration: 0.5 }}
             >
               {[
-                { value: "35+", label: "Års erfaring" },
+                { value: "40+", label: "Års erfaring" },
                 { value: "20+", label: "Ansatte" },
                 { value: "500+", label: "Prosjekter" },
                 { value: "4", label: "Sertifiseringer" },
@@ -191,19 +183,23 @@ export default function HomePage() {
             {services.map((s) => (
               <StaggerItem key={s.title}>
                 <motion.div whileHover={{ y: -6 }} transition={{ duration: 0.25 }}>
-                  <Card className="h-full border-0 ring-1 ring-slate-100 hover:shadow-xl hover:ring-teal-200 transition-all duration-300 group cursor-pointer">
-                    <CardContent className="p-6">
-                      <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center mb-4 group-hover:bg-teal-100 transition-colors">
-                        <s.icon className="size-6 text-teal-600" />
-                      </div>
-                      <h3 className="font-heading font-semibold text-lg text-slate-900 mb-2">
+                  <div className="group relative h-64 rounded-2xl overflow-hidden cursor-pointer">
+                    <Image
+                      src={s.image}
+                      alt={s.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/10 group-hover:from-slate-900/95 transition-colors duration-300" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <h3 className="font-heading font-semibold text-xl text-white mb-1">
                         {s.title}
                       </h3>
-                      <p className="text-slate-600 text-sm leading-relaxed">
+                      <p className="text-white/70 text-sm leading-relaxed">
                         {s.desc}
                       </p>
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </div>
                 </motion.div>
               </StaggerItem>
             ))}
