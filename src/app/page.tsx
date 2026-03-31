@@ -280,14 +280,12 @@ export default function HomePage() {
               >
                 Kontakt oss
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white/30 text-white hover:bg-white/10 hover:text-white h-14 px-10 text-base rounded-full"
-                render={<a href="tel:+4792258585" />}
+              <a
+                href="tel:+4792258585"
+                className="inline-flex items-center justify-center h-14 px-10 text-base font-medium text-white rounded-full border border-white/30 hover:bg-white/10 transition-colors duration-200 cursor-pointer"
               >
                 Ring 922 58 585
-              </Button>
+              </a>
             </div>
           </ScrollReveal>
         </div>
