@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Hjem" },
@@ -33,20 +33,17 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
-          {/* Logo */}
+          {/* Logo — render at native size, no upscaling */}
           <Link href="/" className="flex items-center gap-3 shrink-0">
             <Image
               src="/images/logo.png"
               alt="Lørenskog Rørleggerbedrift"
-              width={48}
-              height={48}
-              className="h-10 w-auto brightness-0 invert"
+              width={364}
+              height={60}
+              className="h-8 w-auto brightness-0 invert"
+              priority
+              unoptimized
             />
-            <span className="font-heading font-semibold text-white text-sm leading-tight hidden sm:block">
-              Lørenskog
-              <br />
-              Rørleggerbedrift
-            </span>
           </Link>
 
           {/* Center links */}
@@ -62,7 +59,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* CTA button — rounded pill style like FlowMate */}
+          {/* CTA button — rounded pill */}
           <div className="hidden md:block">
             <Link
               href="/kontakt"
@@ -111,22 +108,6 @@ export default function Navbar() {
               >
                 Kontakt oss
               </Link>
-              <div className="pt-4 border-t border-white/10 mt-3 flex flex-col gap-2">
-                <a
-                  href="tel:+4792258585"
-                  className="flex items-center gap-2 px-4 py-2 text-sm text-white/60 hover:text-white transition-colors"
-                >
-                  <Phone className="size-4" />
-                  +47 922 58 585
-                </a>
-                <a
-                  href="mailto:mail@lorenskogror.no"
-                  className="flex items-center gap-2 px-4 py-2 text-sm text-white/60 hover:text-white transition-colors"
-                >
-                  <Mail className="size-4" />
-                  mail@lorenskogror.no
-                </a>
-              </div>
             </div>
           </motion.div>
         )}
