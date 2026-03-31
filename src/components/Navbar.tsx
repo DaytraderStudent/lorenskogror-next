@@ -5,14 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, Phone, Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { href: "/", label: "Hjem" },
   { href: "/om-oss", label: "Om oss" },
   { href: "/leverandorer", label: "Leverandører" },
   { href: "/miljo", label: "Miljø" },
-  { href: "/kontakt", label: "Kontakt" },
 ];
 
 export default function Navbar() {
@@ -27,74 +25,58 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Top bar */}
-      <div className="bg-teal-900 text-white text-sm py-1.5 hidden md:block">
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-end gap-6">
-          <a
-            href="mailto:mail@lorenskogror.no"
-            className="flex items-center gap-1.5 hover:text-teal-200 transition-colors"
-          >
-            <Mail className="size-3.5" />
-            mail@lorenskogror.no
-          </a>
-          <a
-            href="tel:+4792258585"
-            className="flex items-center gap-1.5 hover:text-teal-200 transition-colors"
-          >
-            <Phone className="size-3.5" />
-            +47 922 58 585
-          </a>
-        </div>
-      </div>
-
-      {/* Main nav */}
       <nav
-        className={`transition-all duration-300 ${
+        className={`transition-all duration-500 ${
           scrolled
-            ? "bg-white/95 backdrop-blur-md shadow-sm"
-            : "bg-white/80 backdrop-blur-sm"
+            ? "bg-slate-950/90 backdrop-blur-xl shadow-lg shadow-black/10"
+            : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+          {/* Logo */}
           <Link href="/" className="flex items-center gap-3 shrink-0">
             <Image
               src="/images/logo.png"
               alt="Lørenskog Rørleggerbedrift"
               width={48}
               height={48}
-              className="h-10 w-auto"
+              className="h-10 w-auto brightness-0 invert"
             />
-            <span className="font-heading font-semibold text-slate-900 text-sm leading-tight hidden sm:block">
+            <span className="font-heading font-semibold text-white text-sm leading-tight hidden sm:block">
               Lørenskog
               <br />
               Rørleggerbedrift
             </span>
           </Link>
 
-          {/* Desktop links */}
+          {/* Center links */}
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-teal-600 rounded-lg hover:bg-teal-50 transition-colors"
+                className="px-4 py-2 text-sm font-medium text-white/80 hover:text-white rounded-lg transition-colors duration-200 cursor-pointer"
               >
                 {link.label}
               </Link>
             ))}
-            <Button
-              className="ml-3 bg-teal-600 hover:bg-teal-700 text-white"
-              render={<Link href="/kontakt" />}
+          </div>
+
+          {/* CTA button — rounded pill style like FlowMate */}
+          <div className="hidden md:block">
+            <Link
+              href="/kontakt"
+              className="inline-flex items-center px-6 py-2.5 rounded-full text-sm font-medium text-white border border-white/25 hover:bg-white/10 backdrop-blur-sm transition-all duration-200 cursor-pointer"
             >
               Kontakt oss
-            </Button>
+            </Link>
           </div>
 
           {/* Mobile toggle */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden p-2 text-slate-700"
-            aria-label="Meny"
+            className="md:hidden p-2 text-white cursor-pointer"
+            aria-label={open ? "Lukk meny" : "Åpne meny"}
           >
             {open ? <X className="size-6" /> : <Menu className="size-6" />}
           </button>
@@ -108,7 +90,8 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-b border-slate-200 overflow-hidden"
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="md:hidden bg-slate-950/95 backdrop-blur-xl border-b border-white/10 overflow-hidden"
           >
             <div className="px-4 py-4 space-y-1">
               {navLinks.map((link) => (
@@ -116,22 +99,29 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block px-3 py-2.5 text-sm font-medium text-slate-700 hover:text-teal-600 hover:bg-teal-50 rounded-lg transition-colors"
+                  className="block px-4 py-3 text-sm font-medium text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
                 >
                   {link.label}
                 </Link>
               ))}
-              <div className="pt-2 flex flex-col gap-2">
+              <Link
+                href="/kontakt"
+                onClick={() => setOpen(false)}
+                className="block mt-3 px-4 py-3 text-sm font-medium text-white text-center border border-white/25 rounded-full hover:bg-white/10 transition-colors"
+              >
+                Kontakt oss
+              </Link>
+              <div className="pt-4 border-t border-white/10 mt-3 flex flex-col gap-2">
                 <a
                   href="tel:+4792258585"
-                  className="flex items-center gap-2 px-3 py-2 text-sm text-slate-600"
+                  className="flex items-center gap-2 px-4 py-2 text-sm text-white/60 hover:text-white transition-colors"
                 >
                   <Phone className="size-4" />
                   +47 922 58 585
                 </a>
                 <a
                   href="mailto:mail@lorenskogror.no"
-                  className="flex items-center gap-2 px-3 py-2 text-sm text-slate-600"
+                  className="flex items-center gap-2 px-4 py-2 text-sm text-white/60 hover:text-white transition-colors"
                 >
                   <Mail className="size-4" />
                   mail@lorenskogror.no
