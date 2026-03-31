@@ -7,7 +7,7 @@ import { Users, Award, Briefcase, ShieldCheck } from "lucide-react";
 
 const stats = [
   { value: "20+", label: "Ansatte", icon: Users },
-  { value: "35+", label: "Ars erfaring", icon: Award },
+  { value: "40+", label: "Års erfaring", icon: Award },
   { value: "500+", label: "Prosjekter", icon: Briefcase },
   { value: "4", label: "Sertifiseringer", icon: ShieldCheck },
 ];
@@ -16,7 +16,7 @@ const partners = [
   { src: "/images/variant-vvs.png", label: "Variant VVS" },
   { src: "/images/oso.png", label: "OSO" },
   { src: "/images/oras.png", label: "ORAS" },
-  { src: "/images/bd.png", label: "Brodrene Dahl" },
+  { src: "/images/bd.png", label: "Brødrene Dahl" },
   { src: "/images/heidenreich.jpg", label: "Heidenreich" },
 ];
 

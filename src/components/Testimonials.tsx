@@ -16,21 +16,21 @@ const testimonials = [
       "Profesjonelt arbeid fra start til slutt. De var presise, ryddet etter seg, og holdt prisen de hadde oppgitt.",
     author: "Kari Hansen",
     role: "Boligeier",
-    location: "Lorenskog",
+    location: "Lørenskog",
   },
   {
     quote:
-      "Vi har brukt Lorenskog Rorleggerbedrift i mange ar til vedlikehold av varmeanlegget vart. Alltid palitelige og grundige.",
+      "Vi har brukt Lørenskog Rørleggerbedrift i mange år til vedlikehold av varmeanlegget vårt. Alltid pålitelige og grundige.",
     author: "Magnus Eriksen",
     role: "Driftsleder",
     location: "Akershus Universitetssykehus",
   },
   {
     quote:
-      "Totalrenovering av badet ble levert pa tid og under budsjett. Svaert fornoyd med kvaliteten.",
+      "Totalrenovering av badet ble levert på tid og under budsjett. Svært fornøyd med kvaliteten.",
     author: "Lise Andersen",
     role: "Boligeier",
-    location: "Lillestrom",
+    location: "Lillestrøm",
   },
 ];
 
