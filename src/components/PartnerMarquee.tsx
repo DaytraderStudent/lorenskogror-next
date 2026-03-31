@@ -20,7 +20,7 @@ export default function PartnerMarquee() {
       </div>
 
       <div
-        className="relative"
+        className="relative overflow-hidden"
         style={{
           maskImage:
             "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
@@ -28,24 +28,33 @@ export default function PartnerMarquee() {
             "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
         }}
       >
-        <div className="flex w-max animate-[marquee_25s_linear_infinite]">
-          {/* Two identical sets for seamless loop */}
-          {[0, 1].map((set) => (
-            <div key={set} className="flex items-center gap-20 px-10">
-              {partners.map((p) => (
-                <div
-                  key={`${set}-${p.label}`}
-                  className="flex-shrink-0 opacity-40 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300"
-                >
-                  <Image
-                    src={p.src}
-                    alt={p.label}
-                    width={140}
-                    height={60}
-                    className="h-10 sm:h-12 w-auto object-contain"
-                  />
-                </div>
-              ))}
+        <style>{`
+          @keyframes partnerScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+        `}</style>
+
+        <div
+          className="flex gap-20 whitespace-nowrap"
+          style={{
+            animation: "partnerScroll 25s linear infinite",
+            width: "max-content",
+          }}
+        >
+          {/* Exact duplicate: first set + second set = seamless loop */}
+          {[...partners, ...partners].map((p, i) => (
+            <div
+              key={i}
+              className="flex-shrink-0 opacity-40 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-300"
+            >
+              <Image
+                src={p.src}
+                alt={p.label}
+                width={140}
+                height={60}
+                className="h-10 sm:h-12 w-auto object-contain"
+              />
             </div>
           ))}
         </div>
