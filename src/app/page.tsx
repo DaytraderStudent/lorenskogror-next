@@ -17,7 +17,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import { StaggerContainer, StaggerItem } from "@/components/motion/StaggerContainer";
-import TrustSection from "@/components/TrustSection";
 import Testimonials from "@/components/Testimonials";
 
 const services = [
@@ -136,6 +135,7 @@ export default function HomePage() {
                 { value: "35+", label: "Års erfaring" },
                 { value: "20+", label: "Ansatte" },
                 { value: "500+", label: "Prosjekter" },
+                { value: "4", label: "Sertifiseringer" },
               ].map((stat) => (
                 <div key={stat.label}>
                   <div className="font-heading text-2xl sm:text-3xl font-bold text-white">
@@ -164,8 +164,6 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* Trust Section — Stats + Partner Marquee */}
-      <TrustSection />
 
       {/* Services */}
       <section id="tjenester" className="py-24 bg-white">
