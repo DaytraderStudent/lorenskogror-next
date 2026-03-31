@@ -176,6 +176,11 @@
   }
 }
 
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 .dark {
   --primary: oklch(0.95 0.16 118.89);
   --background: var(--color-zinc-950);

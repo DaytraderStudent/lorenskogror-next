@@ -18,6 +18,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import { StaggerContainer, StaggerItem } from "@/components/motion/StaggerContainer";
 import Testimonials from "@/components/Testimonials";
+import PartnerMarquee from "@/components/PartnerMarquee";
 
 const services = [
   { icon: Droplets, title: "Sanitæranlegg", desc: "Komplett sanitærinstallasjon for næring og bolig." },
@@ -164,6 +165,9 @@ export default function HomePage() {
         </motion.div>
       </section>
 
+
+      {/* Partner Marquee */}
+      <PartnerMarquee />
 
       {/* Services */}
       <section id="tjenester" className="py-24 bg-white">
