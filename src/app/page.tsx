@@ -104,7 +104,7 @@ export default function HomePage() {
               <Button
                 size="lg"
                 className="bg-teal-600 hover:bg-teal-500 text-white h-14 px-8 text-base font-semibold rounded-full group"
-                render={<Link href="/kontakt" />}
+                render={<a href="#tjenester" />}
               >
                 Våre tjenester
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
