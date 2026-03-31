@@ -11,9 +11,11 @@ const navLinks = [
 ];
 
 const certifications = [
+  { src: "/images/ren.jpg", alt: "Rørentreprenørene" },
+  { src: "/images/nemko.jpg", alt: "Nemko" },
+  { src: "/images/gfa.jpg", alt: "Godkjent for ansvarsrett" },
   { src: "/images/mestermerke.jpg", alt: "Mesterbedrift" },
   { src: "/images/miljofyrtarn.png", alt: "Miljøfyrtårn" },
-  { src: "/images/nemko.jpg", alt: "Nemko" },
 ];
 
 export default function Footer() {
