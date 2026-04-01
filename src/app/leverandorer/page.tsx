@@ -18,57 +18,71 @@ const categories = [
     icon: Bath,
     title: "Bad",
     suppliers: [
-      "Porsgrund Bad",
-      "Ifø Bad",
-      "Foss Bad",
-      "Tema Bad",
-      "VVS Marketing",
-      "Dansani",
+      { name: "Porsgrund Bad", url: "https://www.porsgrund.com" },
+      { name: "Ifø Bad", url: "https://www.ifo.se" },
+      { name: "Foss Bad", url: "https://www.fossbad.no" },
+      { name: "Tema Bad", url: "https://www.temabad.no" },
+      { name: "VVS Marketing", url: "https://www.vvsmarketing.no" },
+      { name: "Dansani", url: "https://www.dansani.no" },
     ],
   },
   {
     icon: Droplets,
     title: "Sanitær / Porselen",
     suppliers: [
-      "IFØ",
-      "Gustavsberg",
-      "Porsgrunds Porselenfabrikk AS",
-      "Holtan Trading",
-      "VVS Marketing",
+      { name: "IFØ", url: "https://www.ifo.se" },
+      { name: "Gustavsberg", url: "https://www.gustavsberg.com" },
+      { name: "Porsgrunds Porselenfabrikk AS", url: "https://www.porsgrund.com" },
+      { name: "Holtan Trading", url: "https://www.holtantrading.no" },
+      { name: "VVS Marketing", url: "https://www.vvsmarketing.no" },
     ],
   },
   {
     icon: Flame,
     title: "Varme / Gulvvarme",
-    suppliers: ["OSO", "CTC Ferrofil", "Variant VVS", "Høiax"],
+    suppliers: [
+      { name: "OSO", url: "https://www.osohotwater.no" },
+      { name: "CTC Ferrofil", url: "https://www.ctc.no" },
+      { name: "Variant VVS", url: "https://www.variantvvs.no" },
+      { name: "Høiax", url: "https://www.hoiax.no" },
+    ],
   },
   {
     icon: Grip,
     title: "Armatur",
     suppliers: [
-      "Mora",
-      "Korsbakken Trading",
-      "Grohe",
-      "Hans Grohe",
-      "ORAS Armatur",
-      "FM Mattson",
-      "Vola",
+      { name: "Mora", url: "https://www.mora.se" },
+      { name: "Korsbakken Trading", url: "https://www.korsbakken.no" },
+      { name: "Grohe", url: "https://www.grohe.no" },
+      { name: "Hans Grohe", url: "https://www.hansgrohe.no" },
+      { name: "ORAS Armatur", url: "https://www.oras.com/no" },
+      { name: "FM Mattson", url: "https://www.fmmattsson.se" },
+      { name: "Vola", url: "https://www.vola.com" },
     ],
   },
   {
     icon: Cylinder,
     title: "Tanker / Utskillere",
-    suppliers: ["Odin Maskin", "Vestfold Plast"],
+    suppliers: [
+      { name: "Odin Maskin", url: "https://www.odinmaskin.no" },
+      { name: "Vestfold Plast", url: "https://www.vestfoldplast.no" },
+    ],
   },
   {
     icon: Wind,
     title: "Varmepumper",
-    suppliers: ["Variant VVS", "Brødrene Dahl", "Qvantum"],
+    suppliers: [
+      { name: "Variant VVS", url: "https://www.variantvvs.no" },
+      { name: "Brødrene Dahl", url: "https://www.dahl.no" },
+      { name: "Qvantum", url: "https://www.qvantum.se" },
+    ],
   },
   {
     icon: GlassWater,
     title: "Tappevannsystemer",
-    suppliers: ["Armaturjonsson"],
+    suppliers: [
+      { name: "Armaturjonsson", url: "https://www.armaturjonsson.no" },
+    ],
   },
 ];
 
@@ -118,11 +132,18 @@ export default function LeverandorerPage() {
                     <ul className="space-y-2">
                       {cat.suppliers.map((s) => (
                         <li
-                          key={s}
-                          className="flex items-center gap-2 text-sm text-slate-600"
+                          key={s.name}
+                          className="flex items-center gap-2 text-sm"
                         >
                           <span className="w-1.5 h-1.5 rounded-full bg-teal-500 shrink-0" />
-                          {s}
+                          <a
+                            href={s.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-teal-600 hover:text-teal-800 hover:underline transition-colors cursor-pointer"
+                          >
+                            {s.name}
+                          </a>
                         </li>
                       ))}
                     </ul>
