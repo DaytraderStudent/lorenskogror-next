@@ -8,8 +8,6 @@ import {
   Snowflake,
   Fuel,
   Bath,
-  Wrench,
-  Building2,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import ScrollReveal from "@/components/motion/ScrollReveal";
@@ -22,8 +20,6 @@ const serviceAreas = [
   { icon: Snowflake, name: "Kjøleanlegg" },
   { icon: Fuel, name: "Gassanlegg" },
   { icon: Bath, name: "Baderom" },
-  { icon: Wrench, name: "Service og vedlikehold" },
-  { icon: Building2, name: "Nybygg og rehabilitering" },
 ];
 
 const clients = [
@@ -40,7 +36,7 @@ const clients = [
 const certifications = [
   {
     src: "/images/cert-ror.jpg",
-    title: "Rørleggersertifikat",
+    title: "Rørentreprenørene",
     desc: "Godkjent rørleggerbedrift med sentral godkjenning.",
   },
   {
@@ -57,6 +53,11 @@ const certifications = [
     src: "/images/cert-mester.jpg",
     title: "Mesterbedrift",
     desc: "Medlem av Mesterbrev-ordningen med dokumentert kompetanse.",
+  },
+  {
+    src: "/images/miljofyrtarn.png",
+    title: "Miljøfyrtårn",
+    desc: "Sertifisert for systematisk miljøarbeid og bærekraft.",
   },
 ];
 
@@ -135,7 +136,7 @@ export default function OmOssPage() {
             </div>
           </ScrollReveal>
 
-          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {serviceAreas.map((area) => (
               <StaggerItem key={area.name}>
                 <div className="bg-white rounded-xl p-5 text-center ring-1 ring-slate-100 hover:shadow-md transition-shadow">
@@ -188,7 +189,7 @@ export default function OmOssPage() {
             </div>
           </ScrollReveal>
 
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {certifications.map((cert) => (
               <StaggerItem key={cert.title}>
                 <Card className="h-full border-0 ring-1 ring-slate-100 hover:shadow-lg transition-shadow">
