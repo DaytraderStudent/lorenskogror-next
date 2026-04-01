@@ -67,7 +67,7 @@ export default function OmOssPage() {
       <section className="relative py-32 bg-teal-950">
         <div className="absolute inset-0 bg-gradient-to-b from-teal-900/50 to-teal-950" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
-          <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4">Om oss</h1>
+          <h1 className="font-heading text-4xl sm:text-5xl font-bold mb-4">Om Lørenskog Rørleggerbedrift</h1>
           <p className="text-teal-200/80 text-lg">
             Tradisjonsrik mesterbedrift med fokus på kvalitet og miljø
           </p>

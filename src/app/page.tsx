@@ -69,6 +69,16 @@ export default function HomePage() {
               ))}
             </motion.div>
 
+            {/* Subtitle */}
+            <motion.p
+              className="text-sm font-medium text-teal-300 uppercase tracking-wider mb-3"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15, duration: 0.5 }}
+            >
+              Vår kompetanse, din trygghet
+            </motion.p>
+
             {/* Heading */}
             <motion.h1
               className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight"
@@ -76,10 +86,9 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              Vår kompetanse,
+              Rørlegger i Lørenskog
               <br />
-              din{" "}
-              <span className="text-teal-400">trygghet</span>
+              <span className="text-teal-400">— Mesterbedrift siden 1984</span>
             </motion.h1>
 
             {/* Subtext */}
