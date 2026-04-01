@@ -52,29 +52,12 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-32 lg:py-0">
           <div className="max-w-2xl">
-            {/* Eyebrow badges */}
-            <motion.div
-              className="flex flex-wrap gap-2 mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.5 }}
-            >
-              {["Mesterbedrift", "Miljøfyrtårn", "Nemko-sertifisert"].map((badge) => (
-                <span
-                  key={badge}
-                  className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/10 text-white/80 border border-white/10 backdrop-blur-sm"
-                >
-                  {badge}
-                </span>
-              ))}
-            </motion.div>
-
             {/* Subtitle */}
             <motion.p
               className="text-sm font-medium text-teal-300 uppercase tracking-wider mb-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.15, duration: 0.5 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
             >
               Vår kompetanse, din trygghet
             </motion.p>
@@ -137,7 +120,7 @@ export default function HomePage() {
                 { value: "40+", label: "Års erfaring" },
                 { value: "20+", label: "Ansatte" },
                 { value: "500+", label: "Prosjekter" },
-                { value: "4", label: "Sertifiseringer" },
+                { value: "5", label: "Sertifiseringer" },
               ].map((stat) => (
                 <div key={stat.label}>
                   <div className="font-heading text-2xl sm:text-3xl font-bold text-white">
