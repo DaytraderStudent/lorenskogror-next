@@ -1,25 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import {
-  Droplets,
-  Flame,
-  ShieldCheck,
-  Snowflake,
-  Fuel,
-  Bath,
-} from "lucide-react";
+import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 import { StaggerContainer, StaggerItem } from "@/components/motion/StaggerContainer";
 
-const serviceAreas = [
-  { icon: Droplets, name: "Sanitæranlegg" },
-  { icon: Flame, name: "Varmeanlegg" },
-  { icon: ShieldCheck, name: "Sprinkelanlegg" },
-  { icon: Snowflake, name: "Kjøleanlegg" },
-  { icon: Fuel, name: "Gassanlegg" },
-  { icon: Bath, name: "Baderom" },
+const services = [
+  { title: "Sanitæranlegg", desc: "Komplett sanitærinstallasjon for næring og bolig.", image: "/images/service-sanitaer.jpg" },
+  { title: "Varmeanlegg", desc: "Energieffektive varmeløsninger og gulvvarme.", image: "/images/service-varme.jpg" },
+  { title: "Sprinkelanlegg", desc: "Brannsikring med godkjente sprinkeranlegg.", image: "/images/service-sprinkler.jpg" },
+  { title: "Kjøleanlegg", desc: "Kjølesystemer for industrielle og kommersielle bygg.", image: "/images/service-kjole.jpg" },
+  { title: "Gassanlegg", desc: "Installasjon og vedlikehold av gassanlegg.", image: "/images/service-gass.jpg" },
+  { title: "Baderom", desc: "Totalrenovering og nybygg av baderom.", image: "/images/service-bad.jpg" },
 ];
 
 const clients = [
@@ -34,31 +27,11 @@ const clients = [
 ];
 
 const certifications = [
-  {
-    src: "/images/cert-ror.jpg",
-    title: "Rørentreprenørene",
-    desc: "Godkjent rørleggerbedrift med sentral godkjenning.",
-  },
-  {
-    src: "/images/cert-nemko.jpg",
-    title: "Nemko-sertifisert",
-    desc: "Sertifisert for installasjon av elektriske varmeanlegg.",
-  },
-  {
-    src: "/images/cert-ansvar.jpg",
-    title: "Sentral godkjenning",
-    desc: "Godkjent for ansvarsrett i tiltaksklasse 1 og 2.",
-  },
-  {
-    src: "/images/cert-mester.jpg",
-    title: "Mesterbedrift",
-    desc: "Medlem av Mesterbrev-ordningen med dokumentert kompetanse.",
-  },
-  {
-    src: "/images/miljofyrtarn.png",
-    title: "Miljøfyrtårn",
-    desc: "Sertifisert for systematisk miljøarbeid og bærekraft.",
-  },
+  { src: "/images/ren.jpg", label: "Rørentreprenørene" },
+  { src: "/images/nemko.jpg", label: "Nemko" },
+  { src: "/images/gfa.jpg", label: "Godkjent for ansvarsrett" },
+  { src: "/images/mestermerke.jpg", label: "Mesterbedrift" },
+  { src: "/images/miljofyrtarn.png", label: "Miljøfyrtårn" },
 ];
 
 export default function OmOssPage() {
@@ -122,7 +95,7 @@ export default function OmOssPage() {
         </div>
       </section>
 
-      {/* Service areas */}
+      {/* Services — same image cards as homepage */}
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
@@ -136,13 +109,28 @@ export default function OmOssPage() {
             </div>
           </ScrollReveal>
 
-          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            {serviceAreas.map((area) => (
-              <StaggerItem key={area.name}>
-                <div className="bg-white rounded-xl p-5 text-center ring-1 ring-slate-100 hover:shadow-md transition-shadow">
-                  <area.icon className="size-7 text-teal-600 mx-auto mb-3" />
-                  <p className="text-sm font-medium text-slate-800">{area.name}</p>
-                </div>
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((s) => (
+              <StaggerItem key={s.title}>
+                <motion.div whileHover={{ y: -6 }} transition={{ duration: 0.25 }}>
+                  <div className="group relative h-64 rounded-2xl overflow-hidden cursor-pointer">
+                    <Image
+                      src={s.image}
+                      alt={s.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/10 group-hover:from-slate-900/95 transition-colors duration-300" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <h3 className="font-heading font-semibold text-xl text-white mb-1">
+                        {s.title}
+                      </h3>
+                      <p className="text-white/70 text-sm leading-relaxed">
+                        {s.desc}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
               </StaggerItem>
             ))}
           </StaggerContainer>
@@ -175,40 +163,37 @@ export default function OmOssPage() {
         </div>
       </section>
 
-      {/* Certifications */}
+      {/* Certifications — same style as homepage */}
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-14">
               <p className="text-teal-600 font-medium text-sm mb-2 uppercase tracking-wider">
-                Dokumentert kvalitet
+                Kvalitet og trygghet
               </p>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-slate-900">
-                Sertifiseringer og godkjenninger
+                Våre sertifiseringer
               </h2>
             </div>
           </ScrollReveal>
 
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <StaggerContainer className="flex flex-wrap items-center justify-center gap-8 sm:gap-10">
             {certifications.map((cert) => (
-              <StaggerItem key={cert.title}>
-                <Card className="h-full border-0 ring-1 ring-slate-100 hover:shadow-lg transition-shadow">
-                  <CardContent className="pt-2 text-center">
-                    <div className="bg-slate-50 rounded-xl p-4 mb-4 inline-block">
-                      <Image
-                        src={cert.src}
-                        alt={cert.title}
-                        width={120}
-                        height={90}
-                        className="h-20 w-auto mx-auto object-contain"
-                      />
-                    </div>
-                    <h3 className="font-heading font-semibold text-slate-900 mb-2">
-                      {cert.title}
-                    </h3>
-                    <p className="text-sm text-slate-600">{cert.desc}</p>
-                  </CardContent>
-                </Card>
+              <StaggerItem key={cert.label} className="text-center">
+                <motion.div whileHover={{ y: -4 }} transition={{ duration: 0.2 }}>
+                  <div className="bg-white rounded-2xl p-6 shadow-sm ring-1 ring-slate-100 mb-3 hover:shadow-lg transition-all duration-300">
+                    <Image
+                      src={cert.src}
+                      alt={cert.label}
+                      width={100}
+                      height={80}
+                      className="h-16 w-auto mx-auto object-contain"
+                    />
+                  </div>
+                  <p className="text-xs font-medium text-slate-600">
+                    {cert.label}
+                  </p>
+                </motion.div>
               </StaggerItem>
             ))}
           </StaggerContainer>
