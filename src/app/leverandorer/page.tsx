@@ -107,7 +107,7 @@ export default function LeverandorerPage() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <p className="text-teal-600 font-medium text-sm mb-2 uppercase tracking-wider">
+              <p className="text-teal-700 font-medium text-sm mb-2 uppercase tracking-wider">
                 Produkter og merker
               </p>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-slate-900">

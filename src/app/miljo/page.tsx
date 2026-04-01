@@ -92,7 +92,7 @@ export default function MiljoPage() {
                     height={60}
                     className="h-12 w-auto"
                   />
-                  <p className="text-teal-600 font-medium text-sm uppercase tracking-wider">
+                  <p className="text-teal-700 font-medium text-sm uppercase tracking-wider">
                     Miljøfyrtårn-sertifisert
                   </p>
                 </div>
@@ -124,7 +124,7 @@ export default function MiljoPage() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <p className="text-teal-600 font-medium text-sm mb-2 uppercase tracking-wider">
+              <p className="text-teal-700 font-medium text-sm mb-2 uppercase tracking-wider">
                 Sertifiseringskrav
               </p>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-slate-900">
@@ -157,7 +157,7 @@ export default function MiljoPage() {
         <div className="max-w-3xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <p className="text-teal-600 font-medium text-sm mb-2 uppercase tracking-wider">
+              <p className="text-teal-700 font-medium text-sm mb-2 uppercase tracking-wider">
                 Vårt løfte
               </p>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-slate-900">
@@ -186,7 +186,7 @@ export default function MiljoPage() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <p className="text-teal-600 font-medium text-sm mb-2 uppercase tracking-wider">
+              <p className="text-teal-700 font-medium text-sm mb-2 uppercase tracking-wider">
                 Globale mål
               </p>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-slate-900">

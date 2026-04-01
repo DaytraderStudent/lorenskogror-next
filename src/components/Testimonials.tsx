@@ -76,7 +76,7 @@ export default function Testimonials() {
     <section className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <p className="text-teal-600 font-medium text-sm mb-2 uppercase tracking-wider">
+          <p className="text-teal-700 font-medium text-sm mb-2 uppercase tracking-wider">
             Kundeomtaler
           </p>
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-slate-900">
@@ -91,7 +91,8 @@ export default function Testimonials() {
         >
           {/* Oversized index number with parallax */}
           <motion.div
-            className="absolute -left-4 sm:-left-8 top-1/2 -translate-y-1/2 text-[16rem] sm:text-[22rem] md:text-[28rem] font-bold text-teal-600/[0.06] select-none pointer-events-none leading-none tracking-tighter"
+            aria-hidden="true"
+            className="absolute -left-4 sm:-left-8 top-1/2 -translate-y-1/2 text-[16rem] sm:text-[22rem] md:text-[28rem] font-bold text-teal-600/[0.08] select-none pointer-events-none leading-none tracking-tighter"
             style={{ x: numberX, y: numberY }}
           >
             <AnimatePresence mode="wait">
@@ -232,7 +233,8 @@ export default function Testimonials() {
                 <div className="flex items-center gap-4">
                   <motion.button
                     onClick={goPrev}
-                    className="group relative w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center overflow-hidden hover:border-teal-300 transition-colors"
+                    aria-label="Forrige kundeomtale"
+                    className="group relative w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center overflow-hidden hover:border-teal-300 transition-colors cursor-pointer"
                     whileTap={{ scale: 0.95 }}
                   >
                     <svg
@@ -254,7 +256,8 @@ export default function Testimonials() {
 
                   <motion.button
                     onClick={goNext}
-                    className="group relative w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center overflow-hidden hover:border-teal-300 transition-colors"
+                    aria-label="Neste kundeomtale"
+                    className="group relative w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center overflow-hidden hover:border-teal-300 transition-colors cursor-pointer"
                     whileTap={{ scale: 0.95 }}
                   >
                     <svg

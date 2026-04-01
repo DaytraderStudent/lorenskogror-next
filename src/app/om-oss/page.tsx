@@ -66,7 +66,7 @@ export default function OmOssPage() {
 
             <ScrollReveal direction="right">
               <div>
-                <p className="text-teal-600 font-medium text-sm mb-2 uppercase tracking-wider">
+                <p className="text-teal-700 font-medium text-sm mb-2 uppercase tracking-wider">
                   Hvem vi er
                 </p>
                 <h2 className="font-heading text-3xl font-bold text-slate-900 mb-6">
@@ -101,7 +101,7 @@ export default function OmOssPage() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <p className="text-teal-600 font-medium text-sm mb-2 uppercase tracking-wider">
+              <p className="text-teal-700 font-medium text-sm mb-2 uppercase tracking-wider">
                 Fagområder
               </p>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-slate-900">
@@ -143,7 +143,7 @@ export default function OmOssPage() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <p className="text-teal-600 font-medium text-sm mb-2 uppercase tracking-wider">
+              <p className="text-teal-700 font-medium text-sm mb-2 uppercase tracking-wider">
                 Referanser
               </p>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-slate-900">
@@ -169,7 +169,7 @@ export default function OmOssPage() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-14">
-              <p className="text-teal-600 font-medium text-sm mb-2 uppercase tracking-wider">
+              <p className="text-teal-700 font-medium text-sm mb-2 uppercase tracking-wider">
                 Kvalitet og trygghet
               </p>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-slate-900">

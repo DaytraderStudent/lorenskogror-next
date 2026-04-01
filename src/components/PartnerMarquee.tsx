@@ -43,7 +43,7 @@ export default function PartnerMarquee() {
   return (
     <section className="py-16 bg-slate-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
-        <p className="text-center text-sm font-medium text-slate-400 uppercase tracking-wider mb-10">
+        <p className="text-center text-sm font-medium text-slate-500 uppercase tracking-wider mb-10">
           Samarbeidspartnere vi stoler på
         </p>
       </div>
