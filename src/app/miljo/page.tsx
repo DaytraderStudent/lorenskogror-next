@@ -136,11 +136,8 @@ export default function MiljoPage() {
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {requirements.map((req) => (
               <StaggerItem key={req.title}>
-                <Card className="h-full border-0 ring-1 ring-slate-100 text-center hover:shadow-lg transition-shadow">
-                  <CardContent className="pt-2">
-                    <div className="w-14 h-14 rounded-2xl bg-teal-50 flex items-center justify-center mx-auto mb-4">
-                      <req.icon className="size-7 text-teal-600" />
-                    </div>
+                <Card className="h-full border-0 ring-1 ring-slate-100 hover:shadow-lg transition-shadow">
+                  <CardContent className="flex flex-col items-center justify-center text-center py-8">
                     <h3 className="font-heading font-semibold text-slate-900 mb-2">
                       {req.title}
                     </h3>
