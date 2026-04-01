@@ -7,8 +7,6 @@ import {
   Zap,
   Truck,
   Leaf,
-  Globe,
-  Heart,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -34,19 +32,19 @@ const policies = [
 
 const sdgs = [
   {
-    icon: Heart,
+    image: "/images/sdg-3.jpg",
     number: "3",
     title: "God helse og livskvalitet",
     desc: "Vi sikrer trygge arbeidsforhold og godt arbeidsmiljø for alle ansatte.",
   },
   {
-    icon: Globe,
+    image: "/images/sdg-12.jpg",
     number: "12",
     title: "Ansvarlig forbruk og produksjon",
     desc: "Vi kildesorterer, velger bærekraftige materialer og minimerer avfall.",
   },
   {
-    icon: Leaf,
+    image: "/images/sdg-13.jpg",
     number: "13",
     title: "Stoppe klimaendringene",
     desc: "Vi jobber aktivt med å redusere utslipp og energiforbruk.",
@@ -208,12 +206,13 @@ export default function MiljoPage() {
               <StaggerItem key={goal.number}>
                 <Card className="h-full border-0 ring-1 ring-slate-100 hover:shadow-lg transition-shadow">
                   <CardContent className="pt-2">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 rounded-xl bg-teal-600 flex items-center justify-center text-white font-heading font-bold text-lg">
-                        {goal.number}
-                      </div>
-                      <goal.icon className="size-6 text-teal-600" />
-                    </div>
+                    <Image
+                      src={goal.image}
+                      alt={`FNs bærekraftsmål ${goal.number}: ${goal.title}`}
+                      width={466}
+                      height={466}
+                      className="w-24 h-24 rounded-xl object-cover mb-4"
+                    />
                     <h3 className="font-heading font-semibold text-slate-900 mb-2">
                       {goal.title}
                     </h3>
