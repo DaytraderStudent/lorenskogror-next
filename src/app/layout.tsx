@@ -24,16 +24,20 @@ export const metadata: Metadata = {
   description:
     "Rørlegger i Lørenskog med over 40 års erfaring. Mesterbedrift og Miljøfyrtårn-sertifisert. Sanitær, varme, sprinkler, kjøle- og gassanlegg for næring og bolig i Akershus.",
   keywords: [
-    "rørlegger",
-    "Lørenskog",
-    "mesterbedrift",
+    "rørlegger Lørenskog",
+    "rørlegger Lillestrøm",
+    "VVS Lørenskog",
+    "mesterbedrift rørlegger Akershus",
+    "rørleggerbedrift Lørenskog",
     "sanitær",
     "varme",
     "sprinkler",
-    "rørleggerbedrift",
-    "VVS",
-    "Akershus",
-    "baderom",
+    "baderom Lørenskog",
+    "baderomsrenovering Lørenskog",
+    "rørlegger Rælingen",
+    "rørlegger Skedsmo",
+    "VVS Akershus",
+    "Miljøfyrtårn rørlegger",
   ],
   openGraph: {
     type: "website",
@@ -76,21 +80,47 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Plumber",
+              "@id": "https://lorenskogror-next.vercel.app/#organization",
               "name": "Lørenskog Rørleggerbedrift AS",
               "url": "https://lorenskogror-next.vercel.app",
               "telephone": "+4792258585",
               "email": "mail@lorenskogror.no",
+              "description": "Rørlegger i Lørenskog med over 40 års erfaring. Mesterbedrift og Miljøfyrtårn-sertifisert. Sanitær, varme, sprinkler, kjøle- og gassanlegg for næring og bolig i Akershus.",
+              "image": "https://lorenskogror-next.vercel.app/images/logo.png",
+              "logo": "https://lorenskogror-next.vercel.app/images/logo.png",
+              "priceRange": "$$",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Solheimveien 62",
                 "addressLocality": "Lørenskog",
+                "addressRegion": "Akershus",
                 "postalCode": "1473",
                 "addressCountry": "NO"
               },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 59.928,
+                "longitude": 10.969
+              },
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+                  "opens": "07:00",
+                  "closes": "15:30"
+                }
+              ],
               "foundingDate": "1984",
               "numberOfEmployees": { "@type": "QuantitativeValue", "value": 20 },
-              "areaServed": ["Lørenskog", "Lillestrøm", "Rælingen", "Skedsmo", "Akershus"],
-              "hasCredential": ["Mesterbedrift", "Miljøfyrtårn", "Nemko-sertifisert", "Godkjent for ansvarsrett", "Rørentreprenørene"]
+              "areaServed": [
+                { "@type": "City", "name": "Lørenskog" },
+                { "@type": "City", "name": "Lillestrøm" },
+                { "@type": "City", "name": "Rælingen" },
+                { "@type": "City", "name": "Skedsmo" },
+                { "@type": "AdministrativeArea", "name": "Akershus" }
+              ],
+              "hasCredential": ["Mesterbedrift","Miljøfyrtårn","Nemko-sertifisert","Godkjent for ansvarsrett","Rørentreprenørene"],
+              "sameAs": []
             })
           }}
         />

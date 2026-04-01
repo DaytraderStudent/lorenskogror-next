@@ -39,6 +39,9 @@ export default function Footer() {
               Tradisjonsrik mesterbedrift med over 40 års erfaring innen VVS.
               Vi leverer kvalitetsarbeid med fokus på miljø og bærekraft.
             </p>
+            <p className="text-teal-200/70 text-sm mt-3">
+              Vi betjener Lørenskog, Lillestrøm, Rælingen, Skedsmo og hele Akershus.
+            </p>
           </div>
 
           {/* Navigation */}

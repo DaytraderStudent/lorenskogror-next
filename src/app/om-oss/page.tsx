@@ -76,7 +76,8 @@ export default function OmOssPage() {
                   <p>
                     Lørenskog Rørleggerbedrift AS er en tradisjonsrik
                     mesterbedrift med over 40 års erfaring. Med rundt 20 ansatte
-                    leverer vi komplette VVS-løsninger for både næring og bolig.
+                    leverer vi komplette VVS-løsninger for både næring og bolig
+                    i Lørenskog, Lillestrøm, Rælingen, Skedsmo og hele Akershus.
                   </p>
                   <p>
                     Vi er en godkjent opplæringsbedrift og legger stor vekt på
@@ -116,7 +117,7 @@ export default function OmOssPage() {
                   <div className="group relative h-64 rounded-2xl overflow-hidden cursor-pointer">
                     <Image
                       src={s.image}
-                      alt={s.title}
+                      alt={`${s.title} i Lørenskog og Akershus`}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />

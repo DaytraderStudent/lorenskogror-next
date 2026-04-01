@@ -40,7 +40,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src="/images/hero-bg.jpg"
-            alt="Rørlegger i arbeid"
+            alt="Rørlegger i Lørenskog utfører VVS-arbeid"
             fill
             priority
             className="object-cover object-center"
@@ -162,11 +162,10 @@ export default function HomePage() {
                 Våre tjenester
               </p>
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-slate-900">
-                Komplett VVS-leverandør
+                Komplett VVS-leverandør i Lørenskog
               </h2>
               <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
-                Vi tar på oss alle typer oppdrag innenfor VVS og rørleggerarbeid,
-                og garanterer kvalitet til avtalt tid og pris.
+                Fra Lørenskog og Lillestrøm til Rælingen og Skedsmo — vi tar på oss alle typer VVS- og rørleggeroppdrag i hele Akershus, og garanterer kvalitet til avtalt tid og pris.
               </p>
             </div>
           </ScrollReveal>
@@ -196,6 +195,37 @@ export default function HomePage() {
               </StaggerItem>
             ))}
           </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Local SEO content section */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <ScrollReveal>
+            <h2 className="font-heading text-3xl font-bold text-slate-900 mb-6 text-center">
+              Din rørlegger i Lørenskog og omegn
+            </h2>
+            <div className="text-slate-600 leading-relaxed space-y-4">
+              <p>
+                Lørenskog Rørleggerbedrift AS har vært en pålitelig rørlegger i Lørenskog
+                siden 1984. Som mesterbedrift leverer vi alt innen VVS — fra
+                baderomsrenovering og sanitæranlegg til sprinkler, kjøle- og gassanlegg
+                for næringsbygg.
+              </p>
+              <p>
+                Vi betjener kunder i Lørenskog, Lillestrøm, Rælingen, Skedsmo og hele
+                Akershus-regionen. Våre rundt 20 fagutdannede ansatte sørger for at
+                jobben blir gjort riktig første gang, enten det gjelder nybygg, renovering
+                eller vedlikehold.
+              </p>
+              <p>
+                Som Miljøfyrtårn-sertifisert bedrift prioriterer vi bærekraftige
+                løsninger og miljøvennlige materialer. Vi er også Nemko-sertifisert og
+                godkjent for ansvarsrett, noe som gir deg trygghet for at arbeidet
+                utføres i henhold til gjeldende forskrifter.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -244,7 +274,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src="/images/hero-bg.jpg"
-            alt="Rørleggerarbeid"
+            alt="Rørleggerarbeid i Lørenskog og Akershus"
             fill
             className="object-cover"
           />
